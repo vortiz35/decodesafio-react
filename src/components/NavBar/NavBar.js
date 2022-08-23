@@ -4,23 +4,23 @@ const NavBar = () => {
     return (
         <div className="navBar-container">
             <div className="logo">
-                <p>IMAGEN</p>
+                <p>DecoDesign</p>
             </div>
             <div>
                 <ul>
                     <li>
-                        <p>Inicio</p>
+                        <a href="#">Inicio</a>
                     </li>
                     <li>
-                        <p>Productos</p>
+                        <a href="#">Interior</a>
                     </li>
                     <li>
-                        <p>Contacto</p>
+                        <a href="#">Exterior</a>
                     </li>
                 </ul>
             </div>
             <div>
-                <button> Información </button>
+                <button> Contacto </button>
             </div>
         </div>
     );
