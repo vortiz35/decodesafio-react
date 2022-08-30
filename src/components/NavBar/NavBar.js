@@ -1,13 +1,16 @@
 import './estilo.css';
+import favicon from './favicon.ico';
+import CartWidget from '../CartWidget/CartWidget'
 
 const NavBar = () => {
     return (
         <div className="navBar-container">
-            <div className="logo">
-                <p>DecoDesign</p>
+            <div>
+                <img src={favicon} alt="loguito" />
             </div>
             <div>
                 <ul>
+                    {/* ERROR EN LOS HREF POR SER INVÁLIDOS */}
                     <li>
                         <a href="#">Inicio</a>
                     </li>
@@ -19,9 +22,11 @@ const NavBar = () => {
                     </li>
                 </ul>
             </div>
-            <div>
-                <button> Contacto </button>
+            <div className='navBar2'>
+                <CartWidget />
+                <button> Ingresar </button>
             </div>
+            
         </div>
     );
 };
