@@ -1,0 +1,21 @@
+.contenedor{
+    background-color: rgb(203, 204, 167);
+    width: 250px;
+    border-radius: 8px;
+}
+
+.contenedor button {
+    width: 35px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 6px;
+}
+
+.b1 {
+    background-color: red;
+}
+
+.b2 {
+    background-color: green;
+}
