@@ -1,0 +1,10 @@
+.item-container{
+    background-color:rgb(41, 40, 40);
+    border-radius: 6px;
+    border-color: yellow;
+    border-style: dotted;
+    padding: 10px;
+    height: 180px;
+    margin: 20px;
+    cursor: pointer;
+}

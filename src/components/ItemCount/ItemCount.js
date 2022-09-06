@@ -1,24 +1,18 @@
 import './estilo.css';
-import { useState } from "react";
+import {useState } from "react";
 
 const ItemCount = ({stock, inicial}) => {
     const [contador,setContador] = useState(inicial);
 
-    const suma = () => {
-        setContador(contador + 1)
-    }
     const agregar = () => {
-        if (contador < stock){
-            suma();
+        if(contador < stock){
+            setContador(contador + 1);
         }
-    }
-    
-    const resta = () => {
-        setContador(contador - 1)
-    }
+    } 
+
     const quitar = () => {
         if (contador > inicial){
-            resta();
+            setContador(contador - 1);
         }
     }
 
