@@ -1,9 +1,12 @@
+import exterior1 from './exterior1.JPG';
+
 const data = [
     {
         id:1,
         name: 'Exterior 1',
         precio:'$1500',
         stock: 40,
+        imagen: <img src={exterior1} alt="exterior1" />,
     },
     {
         id:2,
