@@ -11,18 +11,14 @@ const NavBar = () => {
             </div>
             <div>
                 <ul>
-                    {/* ERROR EN LOS HREF POR SER INVÁLIDOS */}
                     <li>
                         <NavLink className={({isActive})=> isActive ? "activo" : "inactivo"} to='/'>Inicio</NavLink>
                     </li>
                     <li>
-                        <NavLink className={({isActive})=> isActive ? "activo" : "inactivo"} to='/item'>Productos</NavLink>
+                        <NavLink className={({isActive})=> isActive ? "activo" : "inactivo"} to='/producto/exterior'>Exterior</NavLink>
                     </li>
-                    {/* <li>
-                        <NavLink to='/producto/:prodId'>Productos</NavLink>
-                    </li> */}
                     <li>
-                        <a href="#">Exterior</a>
+                        <NavLink className={({isActive})=> isActive ? "activo" : "inactivo"} to='/producto/interior'>Interior</NavLink>
                     </li>
                 </ul>
             </div>

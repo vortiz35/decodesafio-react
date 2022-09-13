@@ -11,17 +11,12 @@ function App() {
       <div className="App App-header">
         <NavBar />
         <Routes>          
-            <Route path='/producto' element={<ItemListContainer saludo='¡Bienvenidos a Deco Desafío!' />} />
-            {/* <Route path="/item" element={<ItemListContainer/>} /> */}
-            {/* <Route path='/producto' element={<ItemDetailContainer />}>/> */}
+            <Route path='/' element={<ItemListContainer saludo='¡Bienvenidos a Deco Desafío!' />} />
+            <Route path="/producto" element={<ItemListContainer/>} />
             <Route path='/producto/:categoriaId' element={<ItemListContainer />} />
+           
+            <Route path='/item/:prodId' element={<ItemDetailContainer/>}/>
         </Routes>
-{/*  <Route path="/" element={<ItemListContainer/>}/>
-              <Route path="/contacto" element={<ContactoPage/>}/>
-              <Route path="/productos" element={<ItemListContainer/>}/>
-              <Route path="/productos/:categoryId" element={<ItemListContainer/>}/>
-              <Route path='/item/:productId' element={<ItemDetailContainer/>}/> */}
-
       </div>
     </BrowserRouter>
   );

@@ -6,26 +6,27 @@ import { useParams } from 'react-router-dom';
 
 const ItemDetailContainer = ({}) => {
   const {prodId} = useParams();
-  const [items,setItems] = useState([]); 
+  const [item,setItem] = useState([]); 
 
-  const getData = new Promise((resolve,reject) =>{
-    setTimeout(()=>{
-      resolve(data);
-    }, 2000);
-  });
-
-  useEffect(() =>{
-    getData.then((result)=>{
-      setItems(result);
-      // console.log(result);
-    });
-  },[]);
+  const getItem = (id)=>{
+    return new Promise((resolve,reject) =>{
+      const item = data.find(item=>item.id === parseInt(id));
+      resolve(item)
+    })
+  };
+  useEffect(()=>{
+        const getProducto = async()=>{
+            const producto = await getItem(prodId);
+            setItem(producto);
+        }
+        getProducto();
+  },[prodId]);
+ 
 
   return (
     <>
-      <ItemDetail listaItem={items} />
+      <ItemDetail item={item} />
     </>
- 
   )
 }
 

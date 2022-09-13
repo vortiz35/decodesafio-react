@@ -1,24 +1,18 @@
-// import Item from '../Item/Item';
 
-const ItemDetail = ({listaItem}) => {
-     return (
+
+const ItemDetail = ({item}) => {
+    return (
         <>
-        {listaItem.map((prod)=>{
-            return (
-            <>
-                <p> Detalle del producto </p>
-                <div>
-                    <img src={prod.imagen} alt={listaItem.name}></img>
-                </div>
-                <div>
-                    <h4>{prod.name}</h4>
-                    <p>{prod.precio}</p>
-                </div>
-            </>
-            );
-        })}
-    </>
-  );
+            <p> Detalle del producto </p>
+            <div>
+            <img src={item.imagen} alt={item.name}></img>
+            </div>
+            <div>
+                <h4>{item.name}</h4>
+                <p>{item.precio}</p>
+            </div>
+        </>
+    );
 };
 
 export default ItemDetail

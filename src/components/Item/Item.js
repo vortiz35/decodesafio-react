@@ -1,17 +1,18 @@
 import './estilo.css';
 import { Link } from 'react-router-dom';
 
-const Item = ({prod}) => {
+const Item = ({key, name, imagen, precio, stock}) => {
   return (
     <div className="item-container">
-        <h3>{prod.name}</h3>
-        <img src={prod.imagen} alt={prod.name} />
-        <p>{prod.precio}</p>
-        <p> Disponibles: {prod.stock}</p>
-        <Link to={`/item/${prod.id}`}>
+        <h3>{name}</h3>
+        <img src={imagen} alt={name} />
+        <p>{precio}</p>
+        <p>Disponibles: {stock}</p>
+        <Link to={`/item/${key}`}>
                 <button>Ver detalle...</button>
-        </Link>
-   </div>
+          </Link>
+        {/* <button> Ver detalle...</button> */}
+    </div>
   );
 };
 
