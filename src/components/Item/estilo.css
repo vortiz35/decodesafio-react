@@ -3,8 +3,19 @@
     border-radius: 6px;
     border-color: yellow;
     border-style: dotted;
-    padding: 10px;
-    height: 180px;
-    margin: 20px;
+    padding: 5px;
+    height: 5%;
+    margin: 5%;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-container img{
+    width: 30%;
+}
+
+.item-container button{
     cursor: pointer;
 }

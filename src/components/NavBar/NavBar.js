@@ -1,6 +1,7 @@
 import './estilo.css';
 import favicon from './favicon.ico';
 import CartWidget from '../CartWidget/CartWidget'
+import {NavLink} from 'react-router-dom'
 
 const NavBar = () => {
     return (
@@ -12,11 +13,14 @@ const NavBar = () => {
                 <ul>
                     {/* ERROR EN LOS HREF POR SER INVÁLIDOS */}
                     <li>
-                        <a href="#">Inicio</a>
+                        <NavLink className={({isActive})=> isActive ? "activo" : "inactivo"} to='/'>Inicio</NavLink>
                     </li>
                     <li>
-                        <a href="#">Interior</a>
+                        <NavLink className={({isActive})=> isActive ? "activo" : "inactivo"} to='/item'>Productos</NavLink>
                     </li>
+                    {/* <li>
+                        <NavLink to='/producto/:prodId'>Productos</NavLink>
+                    </li> */}
                     <li>
                         <a href="#">Exterior</a>
                     </li>

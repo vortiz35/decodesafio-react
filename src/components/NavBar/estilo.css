@@ -15,10 +15,13 @@
     margin-right: 10px;
 }
 
-.logo p{
-    font-style: italic;
-    font-size: 1.5rem;
-    color: rgb(51, 51, 51);
+.inactivo {
+    color: gray;
+}
+
+.activo {
+    color:white;
+    /* font-weight: bold; */
 }
 
 ul {

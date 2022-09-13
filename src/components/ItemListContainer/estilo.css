@@ -1,6 +1,7 @@
 .itemContenedor {
     display: flex;
-    flex-direction: column;
+    /* flex-wrap: nowrap; */
+    flex-direction: row;
     align-items: center; 
 }
 
