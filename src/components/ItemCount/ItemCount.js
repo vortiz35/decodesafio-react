@@ -1,7 +1,7 @@
 import './estilo.css';
 import {useState } from "react";
 
-const ItemCount = ({stock, inicial}) => {
+const ItemCount = ({stock, inicial, onAdd}) => {
     const [contador,setContador] = useState(inicial);
 
     const agregar = () => {
@@ -24,6 +24,7 @@ const ItemCount = ({stock, inicial}) => {
             <button className='b1' onClick={quitar}> - </button> 
             <button className='b2' onClick={agregar}> + </button> 
         </div>
+        <button onClick={()=>onAdd(contador)}>Agregar al carrito</button>
     </div>
   );
 };
