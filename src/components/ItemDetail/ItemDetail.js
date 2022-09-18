@@ -1,14 +1,19 @@
 //import './estilo.css';
 import ItemCount from '../ItemCount/ItemCount';
-import {useState } from "react";
+import {useState, useContext } from "react";
+import { CartContext } from '../../context/CartContext';
 
 
 const ItemDetail = ({item}) => {
+    //uso desestructuración del objeto value, accediendo directamente a sus propiedades
+    const {addItem} = useContext(CartContext);
     const [count,setCount] = useState(0);
     
+    //Acá "dato" es el número de prod a agregar al carrito
     const onAdd = (dato)=>{
-        //console.log(dato, "usó el contador")
-        setCount(dato)
+        console.log(dato, "usó el contador")
+        setCount(dato);
+        addItem(item, dato)
     }
 
     return (

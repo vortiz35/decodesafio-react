@@ -1,0 +1,22 @@
+
+
+.estilo-carrito p {
+    color: wheat;
+}
+
+.lista-carrito {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.lista-carrito button{
+    width: 150px;
+    margin-left: 50px;
+}
+
+.vaciar {
+    background-color: darkred;
+    color: white;
+}
