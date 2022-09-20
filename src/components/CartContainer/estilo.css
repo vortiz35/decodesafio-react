@@ -1,4 +1,6 @@
-
+.estilo-carrito {
+    height: 700px;
+}
 
 .estilo-carrito p {
     color: wheat;
@@ -14,9 +16,21 @@
 .lista-carrito button{
     width: 150px;
     margin-left: 50px;
+    cursor: pointer;
 }
 
 .vaciar {
     background-color: darkred;
     color: white;
+    cursor: pointer;
+}
+
+.boton-Comprar button{
+    background-color: rgb(233, 241, 112);
+    width: 250px;
+    height: 150;
+    border-radius: 10px;
+    justify-content: center;
+    color: gray;
+    cursor: pointer;
 }

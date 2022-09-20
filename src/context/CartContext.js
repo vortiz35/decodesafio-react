@@ -45,8 +45,21 @@ export const CartProvider = ({children}) =>{
         setListaProdCarrito([]);
     }
 
+    const precioTotal = () =>{
+        const total = listaProdCarrito.reduce((acum, item) => acum + item.precio*item.cantidad, 0);
+        console.log("SUMAR")
+        return total
+    }
+
+    const totalProductos = () =>{
+        const total = listaProdCarrito.reduce((acum, item) => acum + item.cantidad, 0);
+        console.log("productos", total)
+        return total
+    }
+
+
     return(
-        <CartContext.Provider value= {{listaProdCarrito, addItem, removeItem, vaciarCarrito}}>
+        <CartContext.Provider value= {{listaProdCarrito, addItem, removeItem, vaciarCarrito, precioTotal, totalProductos}}>
             {children}
         </CartContext.Provider>
     )

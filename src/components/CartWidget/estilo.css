@@ -3,3 +3,10 @@
     margin-left: 10px;
     margin-right: 15px;
 }
+
+.carro span{
+    background-color:rgb(228, 178, 15);
+    color:white;
+    border-radius: 5px;
+    padding: 5px;
+}

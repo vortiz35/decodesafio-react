@@ -1,5 +1,6 @@
 import './estilo.css';
 import {useState } from "react";
+// import {NavLink} from 'react-router-dom'
 
 const ItemCount = ({stock, inicial, onAdd}) => {
     const [contador,setContador] = useState(inicial);
@@ -26,6 +27,13 @@ const ItemCount = ({stock, inicial, onAdd}) => {
             <button className='b2' onClick={agregar}> + </button> 
         </div>
         <button onClick={()=>onAdd(contador)} className="agregar">Agregar al carrito</button>
+        {/* <>
+            <button onClick={()=>onAdd(contador)} className="agregar">Agregar al carrito</button>
+            :
+            <button onClick={()=>onAdd(contador)} className="agregar">Agregar al carrito</button>
+            <button onClick={()=>onAdd(contador)} className="agregar">Terminar compra</button>
+        </> */}
+        
     </div>
   );
 };
