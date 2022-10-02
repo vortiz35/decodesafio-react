@@ -11,7 +11,7 @@ const data = [
         name: 'Fogonero',
         precio:15000,
         stock: 40,
-        imagen: exterior1,
+        imageID: exterior1,
         categoria: 'exterior'
     },
     {
@@ -19,7 +19,7 @@ const data = [
         name: 'Colgante de madera',
         precio:1800,
         stock: 30,
-        imagen: exterior2,
+        imageID: exterior2,
         categoria: 'exterior'
     },
     {
@@ -27,7 +27,7 @@ const data = [
         name: 'Lámpara solar cálida',
         precio:2100,
         stock: 40,
-        imagen: exterior3,
+        imageID: exterior3,
         categoria: 'exterior'
     },
     {
@@ -35,7 +35,7 @@ const data = [
         name: 'Canasto ovalado',
         precio: 1500,
         stock: 84,
-        imagen: interior1,
+        imageID: interior1,
         categoria: 'interior'
     },
     {
@@ -43,7 +43,7 @@ const data = [
         name: 'Organizador colgante',
         precio: 3500,
         stock: 10,
-        imagen: interior2,
+        imageID: interior2,
         categoria: 'interior'
     },
     {
@@ -51,7 +51,7 @@ const data = [
         name: 'Mesitas multiuso',
         precio: 3500,
         stock: 10,
-        imagen: interior3,
+        imageID: interior3,
         categoria: 'interior'
     }
 ];

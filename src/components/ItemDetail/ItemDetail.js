@@ -21,25 +21,24 @@ const ItemDetail = ({item}) => {
         <>
             <p> Detalle del producto </p>
             <div>
-            <img src={item.imagen} alt={item.name}></img>
+                 <img src={item.imageID} alt={item.name}></img>
             </div>
             <div>
                 <h4>{item.name}</h4>
                 <p> $ {item.precio}</p>
-                <ItemCount stock={item.stock} inicial={1} onAdd={onAdd}/>            
-            </div>
-           
-            <div>
                 {
-                    count > 0 && 
-                    <>
-                        <Link className="boton-Comprar" to='/cart'>
+                count == 0 ?
+                    <ItemCount stock={item.stock} inicial={1} onAdd={onAdd}/>  
+                    :
+                    <div>
+                    <p>Agregaste: {count} productos </p>
+                    <Link className="boton-Comprar" to='/cart'>
                             <button> Ir al carrito </button>
-                        </Link>
-                    </>
+                    </Link>                   
+                    </div>
                 }
-                <p>Seleccionaste: {count}</p>
-            </div>
+            </div>    
+                
         </>
     );
 };
