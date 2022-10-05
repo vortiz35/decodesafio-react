@@ -1,15 +1,50 @@
 import './estilo.css';
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import { CartContext } from "../../context/CartContext";
 import {NavLink} from 'react-router-dom'
+import {db} from  "../../utils/firebase";
+import {collection, addDoc} from "firebase/firestore";
+
 
 export const CartContainer = () =>{
     const {listaProdCarrito, removeItem, vaciarCarrito, precioTotal} = useContext(CartContext);
     // console.log("value", value)
+    //console.log("LISTA",listaProdCarrito )
+    const [idOrder, setIdOrtder] = useState("");
+    
+    const sendOrder = (event) =>{
+        event.preventDefault();
+        const order = {
+            buyer:{
+                name: event.target[0].value,
+                phone: event.target[1].value,
+                email: event.target[2].value
+            },
+            items:listaProdCarrito,
+            date: new Date(),
+            total: precioTotal()
+        }
+        console.log("PEDIDO", order)
 
+        const queryRef = collection(db,"order");
+        addDoc(queryRef, order).then(respuesta=>{
+            console.log("HOLA", respuesta);
+            setIdOrtder(respuesta.id)
+           
+        });
+        
+    }
+    
 
     return (
-        <div className="estilo-carrito">            
+        <div className="estilo-carrito">
+            {idOrder ?
+             <>
+                <h1> ¡Gracias por su compra!</h1>
+                <p> Su pedido fue enviado bajo el ID :  {idOrder}</p>
+             </>
+             :
+            <div className="estilo-carrito">            
             {
                 listaProdCarrito.length === 0 ?
                 <>
@@ -31,8 +66,23 @@ export const CartContainer = () =>{
                     </div>
                      <p> TOTAL : $ {precioTotal()} </p> 
                     <button onClick={vaciarCarrito} className='vaciar'> Vaciar carrito </button>
+
+                    <form onSubmit={sendOrder}>
+                        <label>Nombre:</label>
+                        <input type="text"/>
+                        <label>Teléfono:</label>
+                        <input/>
+                        <label>Mail:</label>
+                        <input type="email"/>
+                        <button type='submit'> FINALIZAR PEDIDO </button>
+                    </form>
+
                 </>
             }
+            
+            </div>
+            }
         </div>
+        
     )
 }
