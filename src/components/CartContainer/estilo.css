@@ -1,9 +1,9 @@
 .estilo-carrito {
-    height: 700px;
+    height: 1000px;
 }
 
 .estilo-carrito p {
-    color: wheat;
+    color: rgb(83, 78, 78);
 }
 
 .lista-carrito {
@@ -32,5 +32,30 @@
     border-radius: 10px;
     justify-content: center;
     color: gray;
+    cursor: pointer;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    border: 10px;
+    border-radius: 10px;
+}
+
+.formulario form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formulario form input{
+    width: 500px;
+    padding: 5px;
+}
+
+.formulario form button{
+    margin: 15px;
+    padding: 10px;
+    background-color: green;
+    width: 200px;
     cursor: pointer;
 }

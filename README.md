@@ -1,6 +1,23 @@
-# Getting Started with Create React App
+# Readme
+## _E-Commerce Deco-Desafío_
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto Final del curso _React JS_ de CoderHouse.
+Tienda E-Commerce realizada con React JS, que simula la venta de productos para el hogar.
+
+**VIDEO de la aplicación:**
+https://drive.google.com/file/d/1wm1OD6newRvPfRB7oWPniiCpxWi3N65w/view?usp=sharing
+
+### Herramientas utilizadas:
+- ReactJs
+- HTML
+- CSS
+
+### Librerías utilizadas:
+- ReactJs
+- React Router DOM
+- Firebase
+
+
 
 ## Available Scripts
 

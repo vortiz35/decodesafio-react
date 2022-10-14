@@ -8,8 +8,7 @@ import {collection, addDoc} from "firebase/firestore";
 
 export const CartContainer = () =>{
     const {listaProdCarrito, removeItem, vaciarCarrito, precioTotal} = useContext(CartContext);
-    // console.log("value", value)
-    //console.log("LISTA",listaProdCarrito )
+    
     const [idOrder, setIdOrtder] = useState("");
     
     const sendOrder = (event) =>{
@@ -29,10 +28,10 @@ export const CartContainer = () =>{
         const queryRef = collection(db,"order");
         addDoc(queryRef, order).then(respuesta=>{
             console.log("HOLA", respuesta);
-            setIdOrtder(respuesta.id)
-           
+            setIdOrtder(respuesta.id)           
         });
         
+        vaciarCarrito();
     }
     
 
@@ -66,17 +65,19 @@ export const CartContainer = () =>{
                     </div>
                      <p> TOTAL : $ {precioTotal()} </p> 
                     <button onClick={vaciarCarrito} className='vaciar'> Vaciar carrito </button>
-
-                    <form onSubmit={sendOrder}>
-                        <label>Nombre:</label>
-                        <input type="text"/>
-                        <label>Teléfono:</label>
-                        <input/>
-                        <label>Mail:</label>
-                        <input type="email"/>
-                        <button type='submit'> FINALIZAR PEDIDO </button>
-                    </form>
-
+                    
+                    <div className='formulario'>
+                        <h3>Complete sus datos para finalizar la compra: </h3>
+                        <form onSubmit={sendOrder}>
+                            <label>Nombre</label>
+                            <input type="text"/>
+                            <label>Teléfono</label>
+                            <input />
+                            <label>Mail</label>
+                            <input type="email"/>
+                            <button type='submit'> FINALIZAR PEDIDO </button>
+                        </form>
+                    </div>
                 </>
             }
             
